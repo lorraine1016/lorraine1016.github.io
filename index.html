@@ -1,1 +1,106 @@
-我是lrj
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>✨我的小天地✨</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffe6f2, #e6f7ff);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #5a5a5a;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(255, 150, 200, 0.3);
+      max-width: 90%;
+      width: 500px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    h1 {
+      color: #ff69b4;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .emoji {
+      font-size: 2em;
+      margin: 10px 0;
+      display: block;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      background-color: #fff0f5;
+      padding: 4px 8px;
+      border-radius: 10px;
+      color: #ff1493;
+      font-weight: bold;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    a {
+      color: #ff69b4;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .heart {
+      color: #ff4d94;
+      animation: pulse 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>你好呀！👋</h1>
+    <div class="emoji">🎀💖🌈</div>
+    <p>
+      我是 <span class="highlight">lorraine</span>，一个爱生活、爱探索的小天才:3
+    </p>
+    </p>
+    <p>
+      欢迎来我的小天地坐坐～✨  
+      你可以<a href="mailto:your-email@example.com">给我发邮件lorraine-lrj1016@sjtu.edu.cn</a>，或者在社交平台找我玩！
+    </p>
+    <div class="footer">
+      🌸 制作于 2026 春 ✨
+    </div>
+  </div>
+</body>
+</html>
