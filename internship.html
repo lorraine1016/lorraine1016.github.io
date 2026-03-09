@@ -81,13 +81,62 @@
       text-align: center;
     }
 
-    .content-number {
-      font-size: 10em;
-      font-weight: bold;
-      color: #ff69b4;
+    .career-goal {
+      background: linear-gradient(135deg, #ffe6f2, #f0f8ff);
+      border-radius: 16px;
+      padding: 25px;
+      margin-bottom: 30px;
       text-align: center;
-      margin: 50px 0;
-      text-shadow: 4px 4px 8px rgba(255, 150, 200, 0.3);
+      border: 2px solid #ffd6e8;
+    }
+
+    .career-goal h3 {
+      color: #ff69b4;
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
+
+    .career-goal p {
+      font-size: 1.1em;
+      color: #5a5a5a;
+      margin: 0;
+    }
+
+    .internship-section {
+      margin-top: 30px;
+    }
+
+    .internship-item {
+      background-color: #f0f8ff;
+      border-radius: 16px;
+      padding: 20px 25px;
+      margin-bottom: 15px;
+      border-left: 4px solid #69b4ff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .internship-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 4px 15px rgba(105, 180, 255, 0.2);
+    }
+
+    .internship-date {
+      color: #69b4ff;
+      font-weight: bold;
+      font-size: 0.95em;
+      margin-bottom: 5px;
+    }
+
+    .internship-company {
+      color: #5a5a5a;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    .internship-position {
+      color: #888;
+      font-size: 1em;
+      margin-top: 3px;
     }
 
     .footer {
@@ -113,7 +162,38 @@
   <div class="content-page">
     <div class="content-card">
       <h2>实习经历</h2>
-      <div class="content-number">2</div>
+      
+      <div class="career-goal">
+        <h3>职业目标</h3>
+        <p>让好产品抵达更多人</p>
+      </div>
+
+      <div class="internship-section">
+        <div class="internship-item">
+          <div class="internship-date">2025.03 - 2025.06</div>
+          <div class="internship-company">心芯相栖</div>
+          <div class="internship-position">产品增长实习生</div>
+        </div>
+        
+        <div class="internship-item">
+          <div class="internship-date">2024.08 - 2024.12</div>
+          <div class="internship-company">携程集团</div>
+          <div class="internship-position">国际公关实习生</div>
+        </div>
+        
+        <div class="internship-item">
+          <div class="internship-date">2022.10 - 2023.02</div>
+          <div class="internship-company">FGS Global</div>
+          <div class="internship-position">战略传播实习生</div>
+        </div>
+        
+        <div class="internship-item">
+          <div class="internship-date">2022.04 - 2022.09</div>
+          <div class="internship-company">上海广播电视台</div>
+          <div class="internship-position">营销传播实习生</div>
+        </div>
+      </div>
+
       <div class="footer">
         🌸 制作于 2026 春 ✨
       </div>
