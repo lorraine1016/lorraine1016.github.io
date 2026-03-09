@@ -81,13 +81,77 @@
       text-align: center;
     }
 
-    .content-number {
-      font-size: 10em;
-      font-weight: bold;
+    .education-section {
+      margin-bottom: 30px;
+    }
+
+    .education-item {
+      background-color: #fff0f5;
+      border-radius: 16px;
+      padding: 20px 25px;
+      margin-bottom: 15px;
+      border-left: 4px solid #ff69b4;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .education-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 4px 15px rgba(255, 150, 200, 0.2);
+    }
+
+    .education-date {
       color: #ff69b4;
-      text-align: center;
-      margin: 50px 0;
-      text-shadow: 4px 4px 8px rgba(255, 150, 200, 0.3);
+      font-weight: bold;
+      font-size: 0.95em;
+      margin-bottom: 5px;
+    }
+
+    .education-school {
+      color: #5a5a5a;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    .education-major {
+      color: #888;
+      font-size: 1em;
+      margin-top: 3px;
+    }
+
+    .section-title {
+      color: #ff69b4;
+      font-size: 1.3em;
+      font-weight: bold;
+      margin: 25px 0 15px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #ffe6f2;
+    }
+
+    .course-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .course-tag {
+      background-color: #e6f7ff;
+      color: #5a5a5a;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      border: 1px solid #cceeff;
+    }
+
+    .summer-program {
+      background-color: #fff9f0;
+      border-radius: 16px;
+      padding: 20px 25px;
+      border-left: 4px solid #ffb347;
+    }
+
+    .summer-program .education-date {
+      color: #ffb347;
     }
 
     .footer {
@@ -113,7 +177,43 @@
   <div class="content-page">
     <div class="content-card">
       <h2>教育背景</h2>
-      <div class="content-number">1</div>
+      
+      <div class="education-section">
+        <div class="education-item">
+          <div class="education-date">2020.09 - 2021.08</div>
+          <div class="education-school">上海交通大学</div>
+          <div class="education-major">广播电视编导</div>
+        </div>
+        
+        <div class="education-item">
+          <div class="education-date">2021.09 - 2025.06</div>
+          <div class="education-school">上海交通大学</div>
+          <div class="education-major">传播学 - 本科</div>
+        </div>
+        
+        <div class="education-item">
+          <div class="education-date">2025.09 - 至今</div>
+          <div class="education-school">上海交通大学</div>
+          <div class="education-major">传播学 - 学硕</div>
+        </div>
+      </div>
+
+      <div class="section-title">选修课程</div>
+      <div class="course-list">
+        <span class="course-tag">人机传播</span>
+        <span class="course-tag">AIGC与新媒体实务</span>
+        <span class="course-tag">计算社会科学</span>
+        <span class="course-tag">人工智能基础与实践</span>
+        <span class="course-tag">市场调研</span>
+        <span class="course-tag">定量传播研究</span>
+      </div>
+
+      <div class="section-title">暑期访学项目</div>
+      <div class="summer-program">
+        <div class="education-date">2024.7</div>
+        <div class="education-school">新加坡国立大学</div>
+      </div>
+
       <div class="footer">
         🌸 制作于 2026 春 ✨
       </div>
