@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>项目经历 | ✨lrj的小天地✨</title>
+  <title>项目经历 | ✨lorraineee homepage✨</title>
   <style>
+    /* --- 基础全局样式 (与你之前的页面保持一致) --- */
     body {
       margin: 0;
       padding: 0;
@@ -14,6 +15,7 @@
       min-height: 100vh;
     }
 
+    /* --- 导航栏样式 --- */
     .navbar {
       background-color: white;
       box-shadow: 0 4px 12px rgba(255, 150, 200, 0.2);
@@ -61,6 +63,7 @@
       transform: translateY(-2px);
     }
 
+    /* --- 内容区域样式 --- */
     .content-page {
       max-width: 1200px;
       margin: 120px auto 50px;
@@ -77,17 +80,8 @@
     .content-card h2 {
       color: #ff69b4;
       font-size: 2em;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       text-align: center;
-    }
-
-    .content-number {
-      font-size: 10em;
-      font-weight: bold;
-      color: #ff69b4;
-      text-align: center;
-      margin: 50px 0;
-      text-shadow: 4px 4px 8px rgba(255, 150, 200, 0.3);
     }
 
     .footer {
@@ -96,28 +90,173 @@
       color: #aaa;
       text-align: center;
     }
+
+    /* --- 【新增】项目左右分栏布局样式 --- */
+    .project-row {
+      display: flex;
+      gap: 40px;              /* 左右间距 */
+      align-items: flex-start; /* 顶部对齐 */
+      margin-bottom: 50px;    /* 项目之间的间距 */
+      padding-bottom: 40px;
+      border-bottom: 2px dashed #ffd6e8; /* 粉色虚线分割 */
+    }
+
+    .project-row:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    /* 左侧文字部分 */
+    .project-text {
+      flex: 1;                /* 占据剩余空间 */
+      min-width: 300px;
+    }
+
+    .project-title {
+      color: #ff69b4;
+      font-size: 1.6em;
+      font-weight: bold;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .project-desc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .project-desc-list li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 15px;
+      color: #5a5a5a;
+      line-height: 1.7;
+      font-size: 1.1em;
+    }
+
+    /* 列表前的小花朵装饰 */
+    .project-desc-list li::before {
+      content: "🌸";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      font-size: 0.9em;
+    }
+
+    /* 右侧视频部分 */
+    .project-video-col {
+      flex: 0 0 420px;        /* 固定宽度 */
+      max-width: 45%;
+      min-width: 280px;
+    }
+
+    .video-frame-container {
+      position: relative;
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(255, 105, 180, 0.25);
+      aspect-ratio: 16 / 9;   /* 强制 16:9 比例 */
+      background: #000;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .video-frame-container:hover {
+      transform: scale(1.02);
+      box-shadow: 0 15px 35px rgba(255, 105, 180, 0.35);
+    }
+
+    .video-frame-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* --- 手机端适配：变为上下结构 --- */
+    @media (max-width: 768px) {
+      .project-row {
+        flex-direction: column;
+        gap: 25px;
+      }
+      .project-video-col {
+        flex: auto;
+        max-width: 100%;
+        width: 100%;
+      }
+      .content-card {
+        padding: 25px;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <!-- 导航栏 -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="index.html" class="logo">✨lrj的小天地✨</a>
       <div class="nav-links">
         <a href="education.html">教育背景</a>
         <a href="internship.html">实习经历</a>
-        <a href="projects.html">项目经历</a>
+        <a href="projects.html" style="background-color: #fff0f5; color: #ff69b4;">项目经历</a>
       </div>
     </div>
   </nav>
 
+  <!-- 主要内容区 -->
   <div class="content-page">
     <div class="content-card">
       <h2>项目经历</h2>
-      <div class="content-number">3</div>
+
+      <!-- 项目 1: TripFirstAI (左文右视频) -->
+      <div class="project-row">
+        
+        <!-- 左边：文字介绍 -->
+        <div class="project-text">
+          <div class="project-title">
+            TripFirstAI 短途旅游决策助手
+          </div>
+          <ul class="project-desc-list">
+            <li>
+              基于大模型的周末旅行决策系统，实现用户约束条件到目的地推荐的智能匹配
+            </li>
+            <li>
+              构建可扩展的 Agent 架构，实现候选城市筛选、交通验证和城市攻略生成的模块化流程，确保模型输出在交通、天气等真实约束下可用且稳定
+            </li>
+          </ul>
+        </div>
+
+        <!-- 右边：嵌入视频 -->
+        <div class="project-video-col">
+          <div class="video-frame-container">
+            <iframe 
+              src="//player.bilibili.com/player.html?isOutside=true&aid=116198326934910&bvid=BV1aGPXzfETy&cid=36573089111&p=1" 
+              scrolling="no" 
+              border="0" 
+              frameborder="no" 
+              framespacing="0" 
+              allowfullscreen="true">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+      <!-- 项目 1 结束 -->
+
+      <!-- 如果你有第二个项目，可以复制上面的 <div class="project-row">...</div> 块放在这里 -->
+
       <div class="footer">
         🌸 制作于 2026 春 ✨
       </div>
     </div>
   </div>
+
 </body>
 </html>
